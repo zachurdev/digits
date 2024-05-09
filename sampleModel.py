@@ -40,7 +40,7 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
 
 # Train the model with visualization
-history = model.fit(x_train, y_train, epochs=100, validation_data=(x_test, y_test))
+history = model.fit(x_train, y_train, epochs=50, validation_data=(x_test, y_test))
 
 # Visualize training progress (loss and accuracy)
 plt.figure(figsize=(12, 5))
@@ -61,7 +61,6 @@ plt.ylabel('Accuracy')
 plt.legend()
 plt.show()
 
-"""
 # Visualize confusion matrix
 y_pred = np.argmax(model.predict(x_test), axis=-1)
 cm = confusion_matrix(y_test, y_pred)
@@ -80,7 +79,7 @@ for i in range(25):
     plt.title(f'Predicted: {y_pred[i]}, Actual: {y_test[i]}')
     plt.axis('off')
 plt.show()
-"""
+
 
 # Evaluate the model on test data
 model.evaluate(x_test, y_test)
