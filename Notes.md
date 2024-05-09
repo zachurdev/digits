@@ -1,0 +1,11 @@
+Packages
+```
+Tkinter
+Keras
+Tensorflow
+MatPlotLib
+Seaborn
+SciKit-Learn
+PyQt5
+PySide2
+```
